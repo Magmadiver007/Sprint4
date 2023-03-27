@@ -57,7 +57,8 @@ public class MainPageScooter {
     }
 
     public String getFaqAnswerText (String faqButtonText) {
-        WebElement element = driver.findElement(By.xpath("//*[text()[contains(.,'"+faqButtonText+"')]]/../../div[@class='accordion__panel']/p"));
+        WebElement element = driver.findElement(By.xpath("//*[text()[contains(.,'"+faqButtonText+
+                "')]]/../../div[@class='accordion__panel']/p"));
         new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(element));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         return element.getText();

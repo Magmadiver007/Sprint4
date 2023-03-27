@@ -51,7 +51,8 @@ public class TestFAQParametrized {
     @Test
     public void testFaqListParametrizedExpectTrue() {
         mainPage.clickFaqElement(faqButtonText);
-        assertEquals("Значение на странице не совпадает с ожидаемым", faqHiddenText, mainPage.getFaqAnswerText(faqButtonText));
+        assertEquals("Значение на странице не совпадает с ожидаемым",
+                faqHiddenText, mainPage.getFaqAnswerText(faqButtonText));
     }
 
     @AfterClass

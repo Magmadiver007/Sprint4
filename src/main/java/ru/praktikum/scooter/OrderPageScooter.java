@@ -37,7 +37,8 @@ public class OrderPageScooter {
             By.xpath("//div[@class=\"Order_Buttons__1xGrp\"]/button[text()='Нет']");
     private static final By CREATE_ORDER_CHECK_STATUS_BUTTON =
             By.xpath("//div[@class=\"Order_NextButton__1_rCA\"]/button[text()='Посмотреть статус']");
-    private static final By CREATE_ORDER_SUCCESS_MESSAGE = By.xpath("//div[@class='Order_ModalHeader__3FDaJ']");
+    private static final By CREATE_ORDER_SUCCESS_MESSAGE = By.xpath(
+            "//div[@class='Order_ModalHeader__3FDaJ']");
     private final WebDriver driver;
     public OrderPageScooter (WebDriver driver) {
         this.driver = driver;
