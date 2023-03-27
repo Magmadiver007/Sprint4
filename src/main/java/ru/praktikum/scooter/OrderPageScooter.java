@@ -14,8 +14,7 @@ public class OrderPageScooter {
             By.xpath("//input[@placeholder = '* Адрес: куда привезти заказ']");
     private static final By ORDER_FIELD_METRO =
             By.xpath("//input[@placeholder = '* Станция метро']");
-    private static final By ORDER_LIST_METRO =
-            By.xpath("//li[@class='select-search__row']//div[text()=\"Тверская\"]");
+
     private static final By ORDER_FIELD_PHONE =
             By.xpath("//input[@placeholder = '* Телефон: на него позвонит курьер']");
     private static final By ORDER_FIELD_DATE =
@@ -64,7 +63,7 @@ public class OrderPageScooter {
     }
     public void selectMetroField (String Text){
         driver.findElement(ORDER_FIELD_METRO).click();
-        driver.findElement(ORDER_LIST_METRO).click();
+        driver.findElement(By.xpath(getMetroStationXpath(Text))).click();
     }
     public void enterPhoneField (String Text){
         driver.findElement(ORDER_FIELD_PHONE).sendKeys(Text);
@@ -82,8 +81,11 @@ public class OrderPageScooter {
     private String getRentDurationXpath (String Text){
        return  "//div[@class='Dropdown-menu']/div[text()='"+Text+"']";
     }
+    private String getMetroStationXpath (String Text){
+        return  "//li[@class='select-search__row']//div[text()='"+Text+"']";
+    }
     public void selectColour (String text) {
-        driver.findElement(ORDER_FIELD_COLOR_GREY).click();
+        driver.findElement(By.xpath("//input[@id='"+text+"']")).click();
     }
     public void enterDeliveryComment (String text){
         driver.findElement(ORDER_FIELD_COMMENT).sendKeys(text);

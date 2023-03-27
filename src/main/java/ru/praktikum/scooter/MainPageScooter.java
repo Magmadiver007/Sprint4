@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MainPageScooter {
     private static final String PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
     private static final By CREATE_ORDER_BUTTON_TOP =
-            By.xpath("//button[@class=\"Button_Button__ra12g\"]");
+            By.xpath("//button[@class='Button_Button__ra12g']");
     private static final By CREATE_ORDER_BUTTON_DOWN =
-            By.xpath("//button[@class=\"Button_Button__ra12g Button_Middle__1CSJM\"]");
+            By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
     private static final By COOKIE_BUTTON =
             By.xpath("//button[@class=\"App_CookieButton__3cvqF\"]");
